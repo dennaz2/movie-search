@@ -1,0 +1,13 @@
+<main [ngClass]="{ ' body': backgroundImage }">
+    <h1>Movie Search</h1>
+
+    <form class="form" #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value)">
+       <input type="text" class="search-box" placeholder="Search" name="search" ngModel>
+
+       <div class="center">
+            <button type="submit">Search</button>
+       </div>
+        
+    </form>
+
+</main>
