@@ -9,13 +9,14 @@ import { Router } from "@angular/router";
 })
 export class SearchCriteriaComponent implements OnInit {
   backgroundImage: boolean = true;
-  movies: any = [];
+  moviesArr: any = [];
 
   constructor(private movieService: MovieService, private router: Router) {}
-
+  
   doSearch(form: any){
     this.movieService.getMovie(form.search).subscribe(data => {
-      this.movies = data;
+      this.moviesArr = data.results;
+
       console.log(data);
     });
   }

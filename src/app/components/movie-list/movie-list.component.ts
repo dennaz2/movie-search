@@ -7,10 +7,8 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  @Input() movies: any [] = [];
+  @Input() movies: Array<any> = [];
   criteria: string = "";
-
-
 
   constructor(private movieService: MovieService) { }
 
@@ -19,3 +17,6 @@ export class MovieListComponent implements OnInit {
   }
 
 }
+
+
+

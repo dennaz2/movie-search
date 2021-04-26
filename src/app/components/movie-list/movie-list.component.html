@@ -1,1 +1,11 @@
-<p>movie-list works!</p>
+<div class="container">
+    <section *ngFor="let movie of movies">
+        <div>
+            <h1>{{movie.original_title}}</h1>
+            <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="movie-poster">
+        </div>
+        
+    </section>
+</div>   
+
+
