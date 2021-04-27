@@ -10,6 +10,8 @@ export class MovieListComponent implements OnInit {
   @Input() movies: Array<any> = [];
   criteria: string = "";
 
+  
+
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
