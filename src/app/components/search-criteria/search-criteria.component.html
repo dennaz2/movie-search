@@ -3,6 +3,10 @@
 
     <form class="form" #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value)">
        <input type="text" class="search-box" placeholder="Search" name="search" ngModel>
+       <select name="type" id="type" ngModel>
+           <option value="movie" name="movie">Movie</option>
+           <option value="tv" name="tv">Tv Show</option>
+       </select>
 
        <div class="center">
             <button type="submit">Search</button>

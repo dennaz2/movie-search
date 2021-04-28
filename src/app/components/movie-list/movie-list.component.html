@@ -1,8 +1,17 @@
-<div class="container">
-    <section *ngFor="let movie of movies">
-        <div>
-            <h1>{{movie.original_title}}</h1>
-            <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" onerror="this.src='../assets/placeholderMoviePoster.png';" alt="movie-poster">
+<div class="main-contents">
+    <section *ngFor="let movie of movies" class="container">
+        <div class="movie-listing">
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" onerror="this.src='../assets/placeholderMoviePoster.png';" alt="movie-poster" class="poster"> <!-- if its a tv or Movie  -->
+
+                <h1>{{movie.original_title}}</h1><!-- if its a movie-->
+                <h1>{{movie.original_name}}</h1> <!-- if its a tv  show-->
+            </div>
+           
+        </div>
+
+        <div class="moive-info">
+
         </div>
         
     </section>

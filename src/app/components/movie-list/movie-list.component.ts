@@ -8,7 +8,9 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class MovieListComponent implements OnInit {
   @Input() movies: Array<any> = [];
+  type: string = "";
   criteria: string = "";
+  page: number    = 0;
 
   
 
@@ -16,6 +18,10 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getMovie(this.criteria);
+  }
+
+  incrementPageNumber(index: number){
+    
   }
 
 }

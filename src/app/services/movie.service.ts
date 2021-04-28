@@ -11,10 +11,18 @@ export class MovieService {
   //https://api.themoviedb.org/3/movie/550?api_key=
   constructor(private http: HttpClient) { }
 
+  type = "";
+
+  setType(type: string){
+    this.type = type;
+    console.log(this.type);
+  }
+
   getMovie(criteria: string): Observable<any>{
-    return this.http.get("https://api.themoviedb.org/3/search/movie?", {
+    return this.http.get("https://api.themoviedb.org/3/search/" +  this.type + "?", {
       params: {
         api_key: API_KEY,
+        language: 'en',
         query: criteria
       }
     });
