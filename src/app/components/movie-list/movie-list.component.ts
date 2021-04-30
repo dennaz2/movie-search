@@ -10,7 +10,7 @@ export class MovieListComponent implements OnInit {
   @Input() movies: Array<any> = [];
   type: string = "";
   criteria: string = "";
-  page: number    = 0;
+  page: number = 1;
 
   
 
@@ -21,7 +21,7 @@ export class MovieListComponent implements OnInit {
   }
 
   incrementPageNumber(index: number){
-    
+
   }
 
 }

@@ -1,11 +1,12 @@
 <main [ngClass]="{ ' body': backgroundImage }">
-    <h1>Movie Search</h1>
+    <h1>Search Tv</h1>
 
     <form class="form" #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value)">
        <input type="text" class="search-box" placeholder="Search" name="search" ngModel>
-       <select name="type" id="type" ngModel>
-           <option value="movie" name="movie">Movie</option>
-           <option value="tv" name="tv">Tv Show</option>
+       <select name="type" id="type" placeholder="Movie" class="drop-down" ngModel>
+            <option value="" disabled selected hidden>Choose an option</option>
+            <option value="movie" name="movie">Movie</option>
+            <option value="tv" name="tv">Tv Show</option>
        </select>
 
        <div class="center">

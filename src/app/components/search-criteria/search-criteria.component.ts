@@ -22,7 +22,7 @@ export class SearchCriteriaComponent implements OnInit {
       this.moviesArr = data.results;
 
       console.log(data);
-      console.log(form.type);
+      // console.log(form.type);
     });
   }
 
